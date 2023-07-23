@@ -1,0 +1,83 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Keiber Urbila Portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  *,
+  *:after,
+  *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  @font-face {
+    font-family: retroGaming;
+    src: url(/fonts/retroGaming.ttf);
+  }
+
+  body {
+    font-size: 100%;
+    list-style-type: none;
+    background-color: #526d94;
+    color: #fff;
+  }
+  html {
+    font-family: retroGaming, system-ui, sans-serif;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .highlighter {
+    color: #90ee90;
+    font-weight: bold;
+  }
+
+  @media (max-width: 575.98px) {
+    main {
+      display: flex;
+      height: 94vh;
+      flex-direction: column;
+      padding: 1em;
+    }
+    footer {
+      position: fixed;
+      padding: 1em;
+      width: 100%;
+    }
+    .player {
+      object-fit: cover;
+      height: 100vh;
+    }
+    .title {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    .text {
+      font-size: 1.5em;
+      color: #e7e7e7;
+    }
+  }
+</style>

@@ -1,0 +1,100 @@
+---
+interface Props {
+  disable: string;
+}
+const { disable } = Astro.props;
+---
+
+<nav>
+  <a href="/" class={`nav ${disable === "about" && "hide"}`}
+    >About
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 22 22"
+      ><path
+        fill="white"
+        d="M9 3h4v1h1v1h1v4h-1v1h-1v1H9v-1H8V9H7V5h1V4h1V3m1 5v1h2V8h1V6h-1V5h-2v1H9v2h1m-3 4h8v1h2v1h1v1h1v4H3v-4h1v-1h1v-1h2v-1m-1 4H5v1h12v-1h-1v-1h-2v-1H8v1H6v1Z"
+      ></path></svg
+    ></a
+  >
+  <a href="/skills" class={`nav ${disable === "skills" && "hide"}`}
+    >Skills <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 22 22"
+      ><path
+        fill="white"
+        d="M8 3v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v-1h2v2h-1v1h-1v1h1v1h1v1h1v2h-1v1h-2v-1h-1v-1h-1v-1h-1v1h-1v1h-2v-2h1v-1h-1v-1h-1v-1H9v-1H8v-1H7v-1H6v-1H5V9H4V8H3V7H2V2h5v1h1M7 5H6V4H4v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h2v-1h-1v-1h-1v-1h-1V9h-1V8H9V7H8V6H7V5Z"
+      ></path></svg
+    ></a
+  >
+  <a href="/achievements" class={`nav ${disable === "achievements" && "hide"}`}
+    >Achievements <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 22 22"
+      ><path
+        fill="white"
+        d="M20 3v16h-1v1H3v-1H2V3h1V2h16v1h1m-2 3H4v12h14V6M9 9v1h1v1h1v2h-1v1H9v1H8v1H6v-2h1v-1h1v-2H7v-1H6V8h2v1h1m2 7v-2h5v2h-5Z"
+      ></path></svg
+    ></a
+  >
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    position: relative;
+    gap: 5px;
+    align-items: center;
+    color: #fff;
+    user-select: none;
+  }
+  .hide {
+    pointer-events: none;
+    cursor: default;
+    color: rgba(255, 255, 255, 0.25);
+  }
+  .hide path {
+    fill: rgba(255, 255, 255, 0.25);
+  }
+
+  .nav:hover svg {
+    -webkit-animation: wobble-l 0.8s steps(2, end) both;
+    animation: wobble-l 0.8s steps(2, end) both;
+  }
+
+  @keyframes wobble-l {
+    0%,
+    100% {
+      -webkit-transform: translateY(0) rotate(0);
+      transform: translateY(0) rotate(0);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateY(-3.5px) rotate(-6deg);
+      transform: translateY(-3.5px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateY(1.75px) rotate(6deg);
+      transform: translateY(1.75px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateY(-1.75px) rotate(-3.6deg);
+      transform: translateY(-1.75px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateY(0.875px) rotate(2.4deg);
+      transform: translateY(0.875px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateY(-0.5px) rotate(-1.2deg);
+      transform: translateY(-0.5px) rotate(-1.2deg);
+    }
+  }
+</style>
