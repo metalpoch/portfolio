@@ -5,44 +5,40 @@ import skillTech from "../components/constant/techSkills";
 ---
 
 <Layout title="Keiber Urbila: Skills" view="skills">
-  <main>
-    <Chat>
-      <p>Deploy/Serverless<span>&rarr;</span></p>
-      {
-        skillTech.deploy.map(({ title, alt, src }) => (
-          <img class="badge" title={title} alt={alt} src={src} />
-        ))
-      }
+  <Chat>
+    <p>Deploy/Serverless<span>&rarr;</span></p>
+    {
+      skillTech.deploy.map(({ title, alt, src }) => (
+        <img class="badge" title={title} alt={alt} src={src} />
+      ))
+    }
 
-      <p>Bases De Datos<span>&rarr;</span></p>
-      {
-        skillTech.database.map(({ title, alt, src }) => (
-          <img class="badge" title={title} alt={alt} src={src} />
-        ))
-      }
+    <p>Bases De Datos<span>&rarr;</span></p>
+    {
+      skillTech.database.map(({ title, alt, src }) => (
+        <img class="badge" title={title} alt={alt} src={src} />
+      ))
+    }
 
-      <p>Backend<span>&rarr;</span></p>
-      {
-        skillTech.backend.map(({ title, alt, src }) => (
-          <img class="badge" title={title} alt={alt} src={src} />
-        ))
-      }
+    <p>Backend<span>&rarr;</span></p>
+    {
+      skillTech.backend.map(({ title, alt, src }) => (
+        <img class="badge" title={title} alt={alt} src={src} />
+      ))
+    }
 
-      <p>Frontend<span>&rarr;</span></p>
-      {
-        skillTech.frontend.map(({ title, alt, src }) => (
-          <img class="badge" title={title} alt={alt} src={src} />
-        ))
-      }
-      <hr />
-      <p>Dale un vistazo a experiencia y arte CSS:</p>
-      <a href="/exp">&lt; exp /&gt;</a>
-      <br />
-      <a href="/gallery">&lt; gallery /&gt;</a>
-    </Chat>
-
-    <img class="player" alt="Keiber as pixel art" src="/assets/poch.png" />
-  </main>
+    <p>Frontend<span>&rarr;</span></p>
+    {
+      skillTech.frontend.map(({ title, alt, src }) => (
+        <img class="badge" title={title} alt={alt} src={src} />
+      ))
+    }
+    <hr />
+    <p>Dale un vistazo a experiencia y arte CSS:</p>
+    <a href="/exp">&lt; exp /&gt;</a>
+    <br />
+    <a href="/gallery">&lt; gallery /&gt;</a>
+  </Chat>
 </Layout>
 
 <style>

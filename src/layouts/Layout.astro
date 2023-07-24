@@ -4,6 +4,7 @@ interface Props {
   view: string;
 }
 import Navigator from "../components/Navigator.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const { title, view } = Astro.props;
 ---
@@ -17,105 +18,109 @@ const { title, view } = Astro.props;
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
-    <slot />
+    <main transition:animate="slide">
+      <slot />
+    </main>
+    <img class="player" alt="Keiber as pixel art" src="/assets/poch.png" />
     <footer>
       <Navigator disable={view} />
     </footer>
+    <style is:global>
+      *,
+      *:after,
+      *:before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+      @font-face {
+        font-family: retroGaming;
+        src: url(/fonts/retroGaming.ttf);
+      }
+
+      body {
+        font-size: 100%;
+        list-style-type: none;
+        background-color: #526d94;
+        color: #fff;
+      }
+      p {
+        margin-bottom: 0;
+        color: #444;
+        opacity: 0.8;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        font-size: 1.25em;
+      }
+      a {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+        margin: 0;
+        color: #000;
+        font-size: 1.5em;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      html {
+        font-family: retroGaming, system-ui, sans-serif;
+      }
+
+      .highlighter {
+        color: #ae0e9e;
+        font-weight: bold;
+      }
+
+      @media (max-width: 575.98px) {
+        main {
+          display: flex;
+          height: 94vh;
+          flex-direction: column;
+          padding: 1em;
+        }
+        footer {
+          position: fixed;
+          padding: 1em;
+          width: 100%;
+        }
+        .player {
+          position: fixed;
+          bottom: -90px;
+          right: -50px;
+
+          align-self: center;
+          object-fit: cover;
+          padding: 5em;
+          z-index: -10;
+        }
+        .title {
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
+        .text {
+          text-align: justify;
+          text-justify: distribute;
+          font-size: 1.3em;
+          color: #e7e7e7;
+        }
+        .social-media {
+          display: flex;
+          position: fixed;
+          top: 76vh;
+          gap: 0.51em;
+
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          height: 50px;
+          padding: 0.3em;
+        }
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  *,
-  *:after,
-  *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-  }
-  @font-face {
-    font-family: retroGaming;
-    src: url(/fonts/retroGaming.ttf);
-  }
-
-  body {
-    font-size: 100%;
-    list-style-type: none;
-    background-color: #526d94;
-    color: #fff;
-  }
-  p {
-    margin-bottom: 0;
-    color: #444;
-    opacity: 0.8;
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    font-size: 1.25em;
-  }
-  a {
-    text-decoration: underline;
-    font-weight: bold;
-  }
-  h1 {
-    text-align: center;
-    margin: 0;
-    color: #000;
-    font-size: 1.5em;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  html {
-    font-family: retroGaming, system-ui, sans-serif;
-  }
-
-  .highlighter {
-    color: #ae0e9e;
-    font-weight: bold;
-  }
-
-  @media (max-width: 575.98px) {
-    main {
-      display: flex;
-      height: 94vh;
-      flex-direction: column;
-      padding: 1em;
-    }
-    footer {
-      position: fixed;
-      padding: 1em;
-      width: 100%;
-    }
-    .player {
-      position: fixed;
-      bottom: -90px;
-      right: -50px;
-
-      align-self: center;
-      object-fit: cover;
-      padding: 5em;
-      z-index: -10;
-    }
-    .title {
-      font-size: 2em;
-      margin-bottom: 1em;
-    }
-    .text {
-      text-align: justify;
-      text-justify: distribute;
-      font-size: 1.3em;
-      color: #e7e7e7;
-    }
-    .social-media {
-      display: flex;
-      position: fixed;
-      top: 76vh;
-      gap: 0.51em;
-
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 50px;
-      padding: 0.3em;
-    }
-  }
-</style>

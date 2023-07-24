@@ -5,46 +5,43 @@ import projectList from "../components/constant/projects";
 ---
 
 <Layout title="Keiber Urbila: Projects" view="projects">
-  <main>
-    <section>
-      {
-        projectList.map(({ title, body, links }) => (
-          <>
-            <Chat>
-              <h1>{title}</h1>
-              <p>{body}</p>
-              <ul>
-                {links.map((link) => (
-                  <li>
-                    <a href={link.href} target="_blank">
-                      {link.title}
-                      <span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="2em"
-                          height="2em"
-                          viewBox="0 0 32 32"
-                        >
-                          <path
-                            fill="currentColor"
-                            fill-rule="evenodd"
-                            d={link.icon}
-                          />
-                        </svg>
-                      </span>
-                      <img alt={link.alt} src={link.img} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </Chat>
-            <br />
-          </>
-        ))
-      }
-    </section>
-    <img class="player" alt="Keiber as pixel art" src="/assets/poch.png" />
-  </main>
+  <section>
+    {
+      projectList.map(({ title, body, links }) => (
+        <>
+          <Chat>
+            <h1>{title}</h1>
+            <p>{body}</p>
+            <ul>
+              {links.map((link) => (
+                <li>
+                  <a href={link.href} target="_blank">
+                    {link.title}
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="2em"
+                        height="2em"
+                        viewBox="0 0 32 32"
+                      >
+                        <path
+                          fill="currentColor"
+                          fill-rule="evenodd"
+                          d={link.icon}
+                        />
+                      </svg>
+                    </span>
+                    <img alt={link.alt} src={link.img} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Chat>
+          <br />
+        </>
+      ))
+    }
+  </section>
 </Layout>
 
 <style>
