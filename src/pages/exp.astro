@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Chat from "../components/Chat.astro";
+---
+
+<Layout title="Keiber Urbila: EXP" view="exp">
+  <main>
+    <Chat>
+      <p>
+        <span class="highlighter">Creador</span> y mantenedor de Traffic Access.
+      </p>
+      <p>
+        Plataforma de <span class="highlighter">Análisis</span>, monitorización
+        y <span class="highlighter">visualización</span> de grandes
+        <span class="highlighter">cantidades</span> de <span class="highlighter"
+          >datos</span
+        > de tráfico para
+        <span class="highlighter">importante</span> empresa de <span
+          class="highlighter">telecomunicaciones</span
+        >
+        de Venezuela.
+      </p>
+      <video src="/assets/taccessDemo.webm" autoplay muted loop width="100%"
+      ></video>
+    </Chat>
+    <img
+      class="player"
+      alt="Keiber as pixel art"
+      src="/assets/poch.png"
+      class="img-profile"
+    />
+  </main>
+</Layout>
+
+<style>
+  video {
+    opacity: 0.8;
+    filter: brightness(0.9);
+  }
+</style>

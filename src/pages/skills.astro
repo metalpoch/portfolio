@@ -6,40 +6,40 @@ import skillTech from "../components/constant/techSkills";
 
 <Layout title="Keiber Urbila: Skills" view="skills">
   <main>
-    <div class="chats">
-      <Chat>
-        <p>Deploy/Serverless<span>&rarr;</span></p>
-        {
-          skillTech.deploy.map(({ title, alt, src }) => (
-            <img class="badge" title={title} alt={alt} src={src} />
-          ))
-        }
-      </Chat>
-      <Chat>
-        <p>Bases De Datos<span>&rarr;</span></p>
-        {
-          skillTech.database.map(({ title, alt, src }) => (
-            <img class="badge" title={title} alt={alt} src={src} />
-          ))
-        }
-      </Chat>
-      <Chat>
-        <p>Backend<span>&rarr;</span></p>
-        {
-          skillTech.backend.map(({ title, alt, src }) => (
-            <img class="badge" title={title} alt={alt} src={src} />
-          ))
-        }
-      </Chat>
-      <Chat>
-        <p>Frontend<span>&rarr;</span></p>
-        {
-          skillTech.frontend.map(({ title, alt, src }) => (
-            <img class="badge" title={title} alt={alt} src={src} />
-          ))
-        }
-      </Chat>
-    </div>
+    <Chat>
+      <p>Deploy/Serverless<span>&rarr;</span></p>
+      {
+        skillTech.deploy.map(({ title, alt, src }) => (
+          <img class="badge" title={title} alt={alt} src={src} />
+        ))
+      }
+
+      <p>Bases De Datos<span>&rarr;</span></p>
+      {
+        skillTech.database.map(({ title, alt, src }) => (
+          <img class="badge" title={title} alt={alt} src={src} />
+        ))
+      }
+
+      <p>Backend<span>&rarr;</span></p>
+      {
+        skillTech.backend.map(({ title, alt, src }) => (
+          <img class="badge" title={title} alt={alt} src={src} />
+        ))
+      }
+
+      <p>Frontend<span>&rarr;</span></p>
+      {
+        skillTech.frontend.map(({ title, alt, src }) => (
+          <img class="badge" title={title} alt={alt} src={src} />
+        ))
+      }
+      <hr />
+      <p>Dale un vistazo a experiencia y arte CSS:</p>
+      <a href="/exp">&lt; exp /&gt;</a>
+      <br />
+      <a href="/gallery">&lt; gallery /&gt;</a>
+    </Chat>
 
     <img
       class="player"
@@ -53,23 +53,5 @@ import skillTech from "../components/constant/techSkills";
 <style>
   .badge {
     margin-left: 4px;
-  }
-  .chats {
-    height: 50vh;
-    overflow-y: auto;
-    background-color: #fff;
-    border-radius: 10px;
-  }
-  .chats::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  .chats::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 25px;
-  }
-
-  .chats::-webkit-scrollbar-thumb:hover {
-    background: #444;
   }
 </style>

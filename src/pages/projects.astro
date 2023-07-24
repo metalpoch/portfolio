@@ -1,35 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Chat from "../components/Chat.astro";
+import projectList from "../components/constant/projects";
 ---
 
 <Layout title="Keiber Urbila: Projects" view="projects">
   <main>
-    <section>
-      <Card
-        href="https://podcast-t2.vercel.app/"
-        title="Podcast"
-        body="Landing Page para el servicio web de podcast para Spotify for Podcasters."
-      />
-      <br />
-      <Card
-        href="https://poch-pptls.vercel.app/"
-        title="Piedra Papel Tijera Lagarto Spock"
-        body="Guego inspirado en la serie de televisión The Big Bang Theory."
-      />
-      <br />
-      <Card
-        href="https://github.com/metalpoch/jump-snmp/"
-        title="Jump SNMP"
-        body="Realiza peticiones SNMP hacia un servidor remoto mediante SSH utilizando un servidor intermediario.."
-      />
-      <br />
-      <Card
-        href="https://github.com/metalpoch/Traffic-Dashboard/"
-        title="Traffic Dashboard"
-        body="Visualice la tendencias de las aplicaciones más utilizadas en algunas de las ciudades más importantes de Venezuela."
-      />
-    </section>
+    <Chat>
+      {
+        projectList.map((project) => (
+          <>
+            <a href={project.href} target="_blank">
+              <h2>
+                {project.title}
+                <span>&rarr;</span>
+              </h2>
+              <p>{project.body}</p>
+            </a>
+            <hr />
+          </>
+        ))
+      }
+    </Chat>
     <img
       class="player"
       alt="Keiber as pixel art"
@@ -40,7 +33,13 @@ import Card from "../components/Card.astro";
 </Layout>
 
 <style>
-  section {
-    overflow-y: auto;
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 </style>
