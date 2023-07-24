@@ -1,55 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SocialMedia from "../components/SocialMedia.astro";
-import Navigator from "../components/Navigator.astro";
-import Card from "../components/Card.astro";
-import "animate.css";
+import Chat from "../components/Chat.astro";
+// import "animate.css";
 ---
 
-<Layout title="Keiber Urbila">
+<Layout title="Keiber Urbila" view="about">
   <main>
-    <section class="wrapper">
-      <h1 class="title">
-        ¡Hola! Soy <span class="highlighter">Keiber</span>
+    <Chat>
+      <h1>
+        ¡Hola! Soy <span class="highlighter">Keiber</span> 👋
       </h1>
-      <p class="text">
+      <p>
         Creador de <span class="highlighter">soluciones</span>, amante de las
         nuevas
         <span class="highlighter">tecnologías</span>, el minimalismo y el <span
           class="highlighter">open source</span
         >.
       </p>
-    </section>
-    <ul class="social-media">
-      <li>
-        <SocialMedia
-          name="Github"
-          icon="/assets/github.svg"
-          url="https://github.com/metalpoch/"
-        />
-      </li>
-      <li>
-        <SocialMedia
-          name="Threads"
-          icon="/assets/threads.svg"
-          url="https://www.threads.net/@keiberup"
-        />
-      </li>
-      <li>
-        <SocialMedia
-          name="LinkedIn"
-          icon="/assets/linkedin.svg"
-          url="https://www.linkedin.com/in/keiber-urbila/"
-        />
-      </li>
-      <li>
-        <SocialMedia
-          name="Instagram"
-          icon="/assets/instagram.svg"
-          url="https://www.instagram.com/keiberup/"
-        />
-      </li>
-    </ul>
+      <p>
+        Estoy emocionado por utilizar mis <span class="highlighter"
+          >habilidades y conocimientos</span
+        > para crear soluciones innovadoras y de <span class="highlighter"
+          >alta calidad</span
+        > en la web.
+      </p>
+      <p>Hechale un vistazo a mis habilidades y proyectos:</p>
+      <a href="/skills">&lt; skills /&gt;</a>
+      <br />
+      <a href="/projects">&lt; projects /&gt;</a>
+    </Chat>
 
     <img
       class="player"
@@ -58,18 +37,4 @@ import "animate.css";
       class="img-profile"
     />
   </main>
-  <footer>
-    <Navigator disable="about" />
-  </footer>
 </Layout>
-
-<style>
-  @media (max-width: 575.98px) {
-    .social-media {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 5em;
-    }
-  }
-</style>

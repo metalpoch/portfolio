@@ -1,22 +1,48 @@
 ---
-interface Props {
-  name: string;
-  icon: string;
-  url: string;
-}
-const { name, icon, url } = Astro.props;
+const socials = [
+  {
+    name: "Github",
+    icon: "/assets/github.svg",
+    url: "https://github.com/metalpoch/",
+  },
+  {
+    name: "Threads",
+    icon: "/assets/threads.svg",
+    url: "https://www.threads.net/@keiberup",
+  },
+  {
+    name: "LinkedIn",
+    icon: "/assets/linkedin.svg",
+    url: "https://www.linkedin.com/in/keiber-urbila/",
+  },
+  {
+    name: "Instagram",
+    icon: "/assets/instagram.svg",
+    url: "https://www.instagram.com/keiberup/",
+  },
+];
 ---
 
-<a href={url} target="_blank">
-  <img title={name} alt={`${name} logo`} class="btn" src={icon} />
-</a>
+<ul class="social-media">
+  {
+    socials.map((item) => (
+      <a href={item.url} target="_blank">
+        <img
+          title={item.name}
+          alt={`${item.name} logo`}
+          class="btn"
+          src={item.icon}
+        />
+      </a>
+    ))
+  }
+  <li></li>
+</ul>
 
 <style>
   .btn {
-    width: 2.5em;
-    padding: 5px;
+    width: 2em;
     border-radius: 3px;
-    background-color: #000;
   }
 
   .btn:hover {
