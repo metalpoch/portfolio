@@ -25,7 +25,11 @@ const { title, view } = Astro.props;
       <slot />
     </main>
     <footer>
-      <img class="player" alt="Keiber as pixel art" src="/assets/poch.webp" />
+      <img
+        class="player"
+        alt="Keiber as pixel art"
+        src="/assets/KeiberUrbila.webp"
+      />
       <Navigator disable={view} />
     </footer>
 
@@ -39,6 +43,7 @@ const { title, view } = Astro.props;
         text-decoration: none;
         list-style: none;
       }
+
       @font-face {
         font-family: retroGaming;
         src: url(/fonts/retroGaming.ttf);
@@ -47,9 +52,17 @@ const { title, view } = Astro.props;
       body {
         font-size: 100%;
         list-style-type: none;
-        background-color: #526d94;
-        color: #fff;
+        background: url("/assets/bg.webp"),
+          linear-gradient(
+            0deg,
+            rgba(255, 143, 0, 1) 0%,
+            rgba(82, 109, 148, 1) 24%
+          );
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom left;
       }
+
       p {
         margin-bottom: 0;
         color: #444;
@@ -57,10 +70,12 @@ const { title, view } = Astro.props;
         padding: 0.5em 0.5em 0.5em 0.5em;
         font-size: 1.25em;
       }
+
       a {
         text-decoration: underline;
         font-weight: bold;
       }
+
       h1 {
         text-align: center;
         margin: 0;
@@ -68,6 +83,7 @@ const { title, view } = Astro.props;
         font-size: 1.5em;
         transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
       }
+
       html {
         font-family: retroGaming, system-ui, sans-serif;
       }
@@ -76,25 +92,33 @@ const { title, view } = Astro.props;
         color: #ae0e9e;
         font-weight: bold;
       }
+
       main {
         display: flex;
         height: 50vh;
         flex-direction: column;
         padding: 1em;
       }
+
       footer {
         display: flex;
         height: 50vh;
       }
+
       .player {
         height: 50vh;
         object-fit: cover;
       }
+
       @media (max-width: 575.98px) {
         footer {
           position: fixed;
           padding: 1em;
           width: 100%;
+        }
+        .player {
+          height: 35vh;
+          object-fit: cover;
         }
         .title {
           font-size: 2em;
