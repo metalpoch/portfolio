@@ -1,45 +1,85 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Chat from "../components/Chat.astro";
 import projectList from "../components/constant/projects";
 ---
 
 <Layout title="Keiber Urbila: Projects" view="projects">
   <main>
-    <Chat>
+    <section>
       {
-        projectList.map((project) => (
+        projectList.map(({ title, body, links }) => (
           <>
-            <a href={project.href} target="_blank">
-              <h2>
-                {project.title}
-                <span>&rarr;</span>
-              </h2>
-              <p>{project.body}</p>
-            </a>
-            <hr />
+            <Chat>
+              <h1>{title}</h1>
+              <p>{body}</p>
+              <ul>
+                {links.map((link) => (
+                  <li>
+                    <a href={link.href} target="_blank">
+                      {link.title}
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="2em"
+                          height="2em"
+                          viewBox="0 0 32 32"
+                        >
+                          <path
+                            fill="currentColor"
+                            fill-rule="evenodd"
+                            d={link.icon}
+                          />
+                        </svg>
+                      </span>
+                      <img alt={link.alt} src={link.img} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Chat>
+            <br />
           </>
         ))
       }
-    </Chat>
-    <img
-      class="player"
-      alt="Keiber as pixel art"
-      src="/assets/poch.png"
-      class="img-profile"
-    />
+    </section>
+    <img class="player" alt="Keiber as pixel art" src="/assets/poch.png" />
   </main>
 </Layout>
 
 <style>
-  a {
-    text-decoration: none;
-    color: #111;
+  section {
+    max-height: 40vh;
+    overflow-y: auto;
   }
+
   h2 {
     margin: 0;
-    font-size: 1.25rem;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    font-size: 1.5rem;
+    color: #111;
+  }
+  a {
+    display: flex;
+    font-size: 0.8em;
+    text-decoration: underline;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  section::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  section::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 25px;
+  }
+
+  section::-webkit-scrollbar-thumb:hover {
+    background: #444;
   }
 </style>

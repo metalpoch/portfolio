@@ -4,7 +4,6 @@ interface Props {
   view: string;
 }
 import Navigator from "../components/Navigator.astro";
-import SocialMedia from "../components/SocialMedia.astro";
 
 const { title, view } = Astro.props;
 ---
@@ -15,13 +14,12 @@ const { title, view } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Keiber Urbila Portfolio" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <slot />
-    <SocialMedia />
     <footer>
       <Navigator disable={view} />
     </footer>
@@ -89,10 +87,11 @@ const { title, view } = Astro.props;
     }
     .player {
       position: fixed;
-      top: 250px;
+      bottom: -90px;
+      right: -50px;
+
       align-self: center;
       object-fit: cover;
-      height: 80vh;
       padding: 5em;
       z-index: -10;
     }
