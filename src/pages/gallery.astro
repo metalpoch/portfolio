@@ -1,0 +1,49 @@
+---
+import Chat from "../components/Chat.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- <span class="highlighter"></span> -->
+<Layout title="Keiber Urbila: Galley" view="gallery">
+  <main>
+    <Chat>
+      <p>
+        Esta es mi galeria de arte <span class="highlighter">CSS</span>. Que te
+        parece?
+      </p>
+      <div class="gallery">
+        <h2>Floating Island &rightarrow;</h2>
+        <iframe
+          src="https://codesandbox.io/embed/modest-meadow-tccyz4?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
+          style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+          title="modest-meadow-tccyz4"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+        <hr />
+        <h2>Sad Turtle &rightarrow;</h2>
+
+        <iframe
+          src="https://codesandbox.io/embed/sweet-feather-63c659?autoresize=1&fontsize=14&hidenavigation=1&theme=dark"
+          style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+          title="sweet-feather-63c659"
+          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+      </div>
+    </Chat>
+
+    <img
+      class="player"
+      alt="Keiber as pixel art"
+      src="/assets/poch.png"
+      class="img-profile"
+    />
+  </main>
+</Layout>
+<style>
+  h2 {
+    color: #444;
+    font-size: 1.5em;
+  }
+</style>
