@@ -100,8 +100,8 @@ const { disable } = Astro.props;
     LinkedIn
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="12"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       ><path
         fill="white"
@@ -113,8 +113,8 @@ const { disable } = Astro.props;
     Instagram
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="12"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       ><path
         fill="white"
@@ -132,9 +132,14 @@ const { disable } = Astro.props;
     justify-content: space-between;
     position: absolute;
     right: 0.5em;
-    bottom: 0vh;
+    bottom: 1em;
   }
 
+  @media (max-height: 400px) {
+    a {
+      font-size: 0.8em;
+    }
+  }
   a {
     display: flex;
     position: relative;
@@ -142,6 +147,7 @@ const { disable } = Astro.props;
     align-items: center;
     color: #fff;
     user-select: none;
+    font-size: 1.5em;
     text-decoration: underline;
   }
   .hide {

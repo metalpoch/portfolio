@@ -1,7 +1,7 @@
 export default [
   {
     title: "Podcast",
-    body: "Landing Page para el servicio web de podcast para Spotify for Podcasters.",
+    body: "Landing Page for podcast web service for Spotify for Podcasters.",
     links: [
       {
         title: "WEB",
@@ -17,7 +17,7 @@ export default [
   },
   {
     title: "PPTLS",
-    body: "Juego inspirado en la serie de televisión The Big Bang Theory.",
+    body: "Game inspired by the television series The Big Bang Theory.",
     links: [
       {
         title: "WEB",
@@ -33,7 +33,7 @@ export default [
   },
   {
     title: "Jump SNMP",
-    body: "Realiza peticiones SNMP mediante SSH utilizando un servidor intermediario.",
+    body: "Make SNMP requests via SSH using an intermediary server.",
     links: [
       {
         title: "CODE",
@@ -44,7 +44,7 @@ export default [
   },
   {
     title: "Traffic Dashboard",
-    body: "Visualice la tendencias de las aplicaciones más utilizadas en Venezuela.",
+    body: "Visualize the trends of the most used applications in Venezuela.",
     links: [
       {
         title: "CODE",
