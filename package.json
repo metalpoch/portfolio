@@ -12,5 +12,6 @@
   "dependencies": {
     "animate.css": "4.1.1",
     "astro": "2.9.1"
-  }
+  },
+  "license": "Apache-2.0"
 }

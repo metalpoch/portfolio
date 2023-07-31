@@ -3,6 +3,7 @@ interface Props {
   title: string;
   view: string;
 }
+import ShootingStars from "../components/ShootingStars.astro";
 import Navigator from "../components/Navigator.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -21,6 +22,7 @@ const { title, view } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
+    <ShootingStars />
     <main transition:animate="slide">
       <slot />
     </main>
