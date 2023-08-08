@@ -20,14 +20,15 @@
     width: 100vw;
     height: 32px;
     justify-content: space-between;
+    z-index: -100;
   }
   .star {
     width: 32px;
     height: 32px;
     background: url("/assets/star.png");
     z-index: -100;
-    animation: pulse calc(var(--i) * 100ms) steps(2) infinite,
-      fall calc(var(--i) * 1s) -6s linear infinite;
+    animation: pulse calc(var(--i) * 50ms) steps(2) infinite,
+      fall calc(var(--i) * 5s) -6s linear infinite;
   }
 
   @keyframes pulse {
@@ -43,18 +44,16 @@
       transform: translateY(0) translateX(0) scale(0.2);
     }
     25% {
-      transform: translateY(12.5vh) translateX(-5vw) scale(0.4);
+      transform: translateY(12.5vh) translateX(-100px) scale(0.2);
     }
     50% {
-      transform: translateY(25vh) translateX(-10vw) scale(0.3);
+      transform: translateY(25vh) translateX(-200xp) scale(0.1);
     }
     75% {
-      transform: translateY(37.5vh) translateX(-15vw) scale(0.2);
+      transform: translateY(37.5vh) translateX(-300px) scale(0.2);
     }
     100% {
-      transform: translateY(70vh) translateX(-30vw) scale(0);
+      transform: translateY(70vh) translateX(-600px) scale(0);
     }
   }
 </style>
-
-<!-- 128 x 32 -->

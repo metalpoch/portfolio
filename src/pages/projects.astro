@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Chat from "../components/Chat.astro";
-import projectList from "../components/constant/projects";
+import projectList from "../constant/projects";
 ---
 
 <Layout title="Keiber Urbila: Projects" view="projects">
@@ -15,7 +15,7 @@ import projectList from "../components/constant/projects";
             <ul>
               {links.map((link) => (
                 <li>
-                  <a href={link.href} target="_blank">
+                  <a href={link.href} target="_blank" class="link">
                     {link.title}
                     <span>
                       <svg
@@ -48,6 +48,13 @@ import projectList from "../components/constant/projects";
   section {
     max-height: 40vh;
     overflow-y: auto;
+  }
+  .link {
+    color: purple;
+    transition: 0.1s color linear;
+  }
+  .link:hover {
+    color: #ae0e9e;
   }
   @media (min-width: 640px) {
     section {

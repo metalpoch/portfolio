@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Chat from "../components/Chat.astro";
-import skillTech from "../components/constant/techSkills";
+import skillTech from "../constant/techSkills";
 ---
 
 <Layout title="Keiber Urbila: Skills" view="skills">
@@ -33,13 +33,6 @@ import skillTech from "../components/constant/techSkills";
         <img class="badge" title={title} alt={alt} src={src} />
       ))
     }
-    <hr />
-    <p>
-      Take a look at <span class="highlighter">CSS</span> experience and art:
-    </p>
-    <a href="/exp">&lt; exp /&gt;</a>
-    <br />
-    <a href="/gallery">&lt; gallery /&gt;</a>
   </Chat>
 </Layout>
 
