@@ -7,7 +7,7 @@ export const EXPERIENCE: ExperienceProp[] = [
     company: "Freekee.labs (Remoto)",
     companyUrl: "https://hi-sporter.com/",
     description:
-      "Aplicación movil que permite la transmisión en vivo de partidos y sesiones de entrenamiento, así como la interacción con espectadores",
+      "Aplicación móvil que permite la transmisión en vivo de partidos y sesiones de entrenamiento, así como la interacción con espectadores.",
     technologies: [
       "Go lang",
       "Gin",
@@ -38,7 +38,7 @@ export const EXPERIENCE: ExperienceProp[] = [
     // companyUrl: "https://www.walmart.com/global/seller/101097017",
     companyUrl: "",
     description:
-      "Panel administrativo para e-commerce registrado en Walmart, manejo de inventario y analisis de las finanzas.",
+      "Panel administrativo para e-commerce registrado en Walmart, manejo de inventario y análisis de las finanzas.",
     technologies: [
       "Node JS",
       "Express",
