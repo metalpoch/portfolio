@@ -6,7 +6,7 @@ import { SOCIALS } from "../data/socials";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Vadim Rusin">
+<Layout title="Keiber Urbila">
   <div class="relative hero z-10">
     <div
       class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
@@ -18,24 +18,24 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="flex lg:items-start gap-4 flex-col lg:flex-row items-center text-center lg:text-left"
           >
-            <img src="/avatar.webp" alt="Vadim Rusin" class="w-16 h-16" />
+            <img src="/profile.webp" alt="Keiber Urbila" class="w-16 h-16" />
             <div>
               <a
                 href="/"
                 class="text-4xl lg:text-5xl block font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
               >
-                <h1>Vadim Rusin</h1>
+                <h1>Keiber Urbila</h1>
               </a>
               <h2 class="mt-2 text-sm lg:text-lg font-medium text-neutral-400">
-                Experienced Front-End Engineer
+                Desarrollador Full Stack
               </h2>
 
               <a
                 data-ccursor
-                href="mailto:rusinvadym@gmail.com"
+                href="mailto:keiberup.dev@gmail.com"
                 class="inline-flex transition-all border-neutral-700 hover:border-opacity-0 border-opacity-50 shadow rounded-md border backdrop-blur-xl bg-neutral-400/10 px-3 py-2.5 items-center text-white font-semibold group p-2 text-sm gap-x-2 mt-4"
               >
-                <span>Email me</span>
+                <span>Mi Email</span>
                 <sapn
                   class="w-2 h-2 rounded-full bg-green-400 duration-1000 animate-pulse"
                 >
@@ -81,23 +81,24 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
               >
-                About
+                Acerca de mi
               </h2>
             </div>
             <div>
               <div class="mb-4 space-y-4">
                 <p>
-                  In my current role as a Full Stack Engineer at Dutch Pet
-                  (Remote), I am at the forefront of designing and architecting
-                  dutch.com, leveraging a powerful stack including Shopify
-                  Storefront API, Admin API, Vue.JS, Node.JS, Liquid, Alpine.js,
-                  and Tailwind. My expertise extends to integrating with the
-                  ReCharge subscription system and collaborating closely with
-                  designers to ensure pixel-perfect layouts and user flows.
+                  Desarrollador Full Stack apasionado por las nuevas tecnologias
+                  y el codigo abierto. Con experiencia en la creacion de
+                  herramientas de medicion de trafico de datos en
+                  telecomunicaciones y desarrollo de backends para aplicaciones
+                  moviles, me dedico a construir soluciones innovadoras y de
+                  alta calidad.
                 </p>
 
                 <p>
-                  Looking forward to new challenges and exciting collaborations!
+                  Mi enfoque minimalista me permite centrarme en lo esencial,
+                  optimizando cada linea de codigo para lograr resultados
+                  eficientes y efectivos.
                 </p>
               </div>
             </div>
@@ -113,14 +114,14 @@ import Layout from "../layouts/Layout.astro";
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
               >
-                Experience
+                Experiencias
               </h2>
             </div><div>
               <ol class="group/list space-y-12">
                 {EXPERIENCE.map((experience) => <Experience {...experience} />)}
               </ol>
 
-              <div class="mt-12">
+              <!-- <div class="mt-12">
                 <a
                   data-ccursor
                   class="inline-flex items-center leading-tight text-neutral-200 font-semibold group p-2 rounded px-3"
@@ -133,13 +134,13 @@ import Layout from "../layouts/Layout.astro";
                     <span
                       class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
                     >
-                      View Full
+                      Curriculum
                     </span>
                     <span class="whitespace-nowrap">
                       <span
                         class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
                       >
-                        Résumé
+                        Vitae
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -155,34 +156,16 @@ import Layout from "../layouts/Layout.astro";
                     ></span
                   ></a
                 >
-              </div>
+              </div> -->
             </div>
           </section>
-          <footer class="max-w-md pb-16 text-sm text-neutral-500 sm:pb-0">
-            <p>
-              Designed in
-              <a
-                href="https://www.figma.com/"
-                class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                target="_blank"
-                rel="noreferrer">Figma</a
-              >
-              and coded in
-              <a
-                href="https://code.visualstudio.com/"
-                class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                target="_blank"
-                rel="noreferrer">Visual Studio Code</a
-              >
-            </p>
-          </footer>
         </main>
       </div>
     </div>
   </div>
 
   <footer class="text-center py-4 text-xs">
-    {new Date().getFullYear()} All rights reserved.
+    {new Date().getFullYear()} Todos los derechos reservados.
   </footer>
 </Layout>
 
@@ -203,10 +186,7 @@ import Layout from "../layouts/Layout.astro";
     overflow-y: visible;
     overflow-x: clip;
   }
-
-  /*
   .hero {
-    animation: fadeIn 3s;
+    animation: fadeIn 1.2s;
   }
-   */
 </style>
