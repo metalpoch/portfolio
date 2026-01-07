@@ -10,184 +10,185 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Keiber Urbila">
   <div class="relative hero z-10">
     <div
-      class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
+      class="mx-auto max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
     >
-      <div class="lg:flex lg:justify-between lg:gap-4">
-        <header
-          class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
-        >
-          <div
-            class="flex lg:items-start gap-4 flex-col lg:flex-row items-center text-center lg:text-left"
-          >
-            <img src="/profile.webp" alt="Keiber Urbila" class="w-16 h-16" />
+      <!-- Top Header Section -->
+      <header class="py-12 lg:py-24 border-b border-neutral-800/50 mb-12">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-6 mb-8">
+            <img
+              src="/profile.webp"
+              alt="Keiber Urbila"
+              class="w-20 h-20 rounded-2xl shadow-2xl border border-neutral-800"
+            />
             <div>
-              <a
-                href="/"
-                class="text-4xl lg:text-5xl block font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+              <h1
+                class="text-4xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
               >
-                <h1>Keiber Urbila</h1>
-              </a>
-              <h2 class="mt-2 text-sm lg:text-lg font-medium text-neutral-400">
+                Keiber Urbila
+              </h1>
+              <h2 class="text-lg lg:text-xl font-medium text-neutral-400 mt-2">
                 Desarrollador Backend
               </h2>
-
-              <a
-                data-ccursor
-                href="mailto:keiberup.dev@gmail.com"
-                class="inline-flex transition-all border-neutral-700 hover:border-opacity-0 border-opacity-50 shadow rounded-md border backdrop-blur-xl bg-neutral-400/10 px-3 py-2.5 items-center text-white font-semibold group p-2 text-sm gap-x-2 mt-4"
-              >
-                <span>Mi Email</span>
-                <sapn
-                  class="w-2 h-2 rounded-full bg-green-400 duration-1000 animate-pulse"
-                >
-                </sapn>
-              </a>
             </div>
           </div>
 
-          {
-            SOCIALS.length && (
-              <ul
-                class="mt-8 flex items-center justify-center lg:justify-normal gap-x-5"
-                aria-label="Social media"
-              >
-                {SOCIALS.map((social) => (
-                  <li class="text-xs p-2 rounded" data-ccursor>
-                    <a
-                      class="block hover:text-slate-200"
-                      href={social.url}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      aria-label={`${social.name} (opens in a new tab)`}
-                    >
-                      <span class="sr-only">{social.name}</span>
-                      {<Component component={social.icon} />}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )
-          }
-        </header>
-
-        <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
-          <section
-            id="about"
-            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-            aria-label="About me"
-          >
-            <div
-              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+          <div class="space-y-6">
+            <p
+              class="text-neutral-400 text-base lg:text-lg leading-relaxed max-w-2xl"
             >
-              <h2
-                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
-              >
-                Acerca de mi
-              </h2>
-            </div>
-            <div>
-              <div class="mb-4 space-y-4">
-                <p>
-                  Desarrollador Backend apasionado por las nuevas tecnologías y
-                  el código abierto. Con experiencia en la creación de
-                  herramientas de medición de tráfico de datos en
-                  telecomunicaciones y desarrollo de backends para aplicaciones
-                  móviles, me dedico a construir soluciones innovadoras y de
-                  alta calidad.
-                </p>
+              Apasionado por las nuevas tecnologías y el código abierto.
+              Especializado en arquitecturas backend escalables,
+              telecomunicaciones y soluciones móviles de alto rendimiento.
+            </p>
 
-                <p>
-                  Mi enfoque minimalista me permite centrarme en lo esencial,
-                  optimizando cada línea de código para lograr resultados
-                  eficientes y efectivos.
-                </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                data-ccursor
+                href="mailto:keiberup.dev@gmail.com"
+                class="inline-flex transition-all bg-neutral-50 hover:bg-neutral-200 text-neutral-950 px-6 py-3 rounded-xl items-center font-bold gap-x-2 group"
+              >
+                <span>Hablemos</span>
+                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse">
+                </div>
+              </a>
+
+              {
+                SOCIALS.length && (
+                  <ul
+                    class="flex items-center gap-x-2"
+                    aria-label="Social media"
+                  >
+                    {SOCIALS.map((social) => (
+                      <li
+                        class="p-2 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                        data-ccursor
+                      >
+                        <a
+                          class="block text-neutral-400 hover:text-neutral-50"
+                          href={social.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          aria-label={`${social.name} (opens in a new tab)`}
+                        >
+                          <span class="sr-only">{social.name}</span>
+                          {<Component component={social.icon} />}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Layout Grid -->
+      <div class="lg:flex lg:justify-between lg:gap-16">
+        <!-- Experience Column (Left/Main) -->
+        <main id="content" class="lg:w-2/3">
+          <section
+            id="experience"
+            class="scroll-mt-24"
+            aria-label="Work experience"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-neutral-500 mb-12 lg:hidden"
+            >
+              Experiencias
+            </h2>
+            <ol class="group/list space-y-12">
+              {EXPERIENCE.map((experience) => <Experience {...experience} />)}
+            </ol>
+          </section>
+        </main>
+
+        <!-- Sticky Sidebar (Right) -->
+        <aside
+          class="hidden lg:block lg:w-1/3 lg:sticky lg:top-12 lg:h-fit space-y-12"
+        >
+          <section id="sidebar-activity" aria-label="GitHub Activity">
+            <h2
+              class="text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-6 flex items-center gap-2"
+            >
+              <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+              Actividad Reciente
+            </h2>
+            <div
+              class="p-1 rounded-2xl border border-neutral-800/30 bg-neutral-900/10 backdrop-blur-sm"
+            >
+              <GitHubActivity client:load />
+            </div>
+          </section>
+
+          <section id="sidebar-action" aria-label="Take Action">
+            <div
+              class="p-6 rounded-2xl border border-neutral-700/20 bg-neutral-900/40 backdrop-blur-xl shadow-xl"
+            >
+              <h3 class="text-sm font-bold text-neutral-200 mb-3">
+                ¿En qué puedo ayudarte?
+              </h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-6">
+                Desde optimización de procesos hasta arquitectura de
+                microservicios. Cuéntame tu reto.
+              </p>
+              <div class="flex flex-col gap-3">
+                <a
+                  href="mailto:keiberup.dev@gmail.com"
+                  class="w-full text-center px-4 py-3 rounded-lg border border-neutral-700 text-xs font-bold text-neutral-200 hover:bg-neutral-800 transition-all"
+                >
+                  🚀 Enviar Propuesta
+                </a>
               </div>
             </div>
           </section>
-          <section
-            id="experience"
-            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-            aria-label="Work experience"
-          >
-            <div
-              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
-            >
-              <h2
-                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
-              >
-                Experiencias
-              </h2>
-            </div><div>
-              <ol class="group/list space-y-12">
-                {EXPERIENCE.map((experience) => <Experience {...experience} />)}
-              </ol>
-            </div>
-          </section>
+        </aside>
 
-          <section
-            id="activity"
-            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-            aria-label="GitHub Activity"
-          >
-            <div
-              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+        <!-- Mobile-only segments at bottom -->
+        <footer
+          class="lg:hidden mt-20 pt-16 border-t border-neutral-800/50 space-y-16"
+        >
+          <section id="mobile-activity">
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-neutral-200 mb-8"
             >
-              <h2
-                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
-              >
-                Actividad Reciente
-              </h2>
-            </div>
+              Actividad Reciente
+            </h2>
             <GitHubActivity client:visible />
           </section>
 
-          <section
-            id="action"
-            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-            aria-label="Take Action"
-          >
+          <section id="mobile-action" class="pb-24">
             <div
-              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+              class="p-8 rounded-2xl border border-neutral-700/50 bg-neutral-900/40 backdrop-blur-xl shadow-2xl"
             >
-              <h2
-                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
-              >
+              <h3 class="text-xl font-bold text-white mb-4">
                 Hagamos algo juntos
-              </h2>
-            </div>
-            <div
-              class="flex flex-col gap-6 p-8 rounded-2xl border border-neutral-700/50 bg-neutral-900/40 backdrop-blur-xl shadow-2xl"
-            >
-              <p class="text-neutral-300">
+              </h3>
+              <p class="text-neutral-400 mb-8 leading-relaxed">
                 ¿Tienes un proyecto en mente o buscas un desarrollador backend
                 para tu equipo? Estoy listo para aportar valor desde el primer
                 día.
               </p>
-              <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col gap-4">
                 <a
                   href="mailto:keiberup.dev@gmail.com"
-                  class="flex-1 min-w-[200px] text-center px-6 py-4 rounded-xl bg-neutral-50 text-neutral-950 font-bold hover:bg-neutral-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  class="w-full text-center px-6 py-4 rounded-xl bg-neutral-50 text-neutral-950 font-bold hover:bg-neutral-200"
                 >
                   🚀 Trabajeños juntos
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/keiber-urbila"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 min-w-[200px] text-center px-6 py-4 rounded-xl border border-neutral-700 font-bold text-neutral-200 hover:bg-neutral-800 transition-all hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  💬 Hablemos por LinkedIn
                 </a>
               </div>
             </div>
           </section>
-        </main>
+        </footer>
       </div>
     </div>
   </div>
 
-  <footer class="text-center py-4 text-xs">
-    {new Date().getFullYear()} Todos los derechos reservados.
+  <footer
+    class="text-center py-12 text-xs text-neutral-600 border-t border-neutral-900"
+  >
+    &copy; {new Date().getFullYear()} Keiber Urbila. Todos los derechos reservados.
   </footer>
 </Layout>
 
