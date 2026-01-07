@@ -2,7 +2,7 @@ import type { Props as ExperienceProp } from "../components/experience/props";
 
 export const EXPERIENCE: ExperienceProp[] = [
   {
-    dates: "Febrero 2024 — Actualidad",
+    dates: "Agosto 2024 — Actualidad",
     title: "Desarrollador Fullstack, TechLead, DevOps",
     company: "CANTV",
     companyUrl: "https://www.cantv.com.ve",
