@@ -1,50 +1,51 @@
-<h2 align="center">
-  <p>Personal website built with Astro</p>
-  <a href="https://vrus.vercel.app/" target="_blank">https://vrus.vercel.app/</a>
-</h2>
+# Keiber Urbila | Desarrollador Backend
 
 <div align="center">
-  <img alt="Demo" src="./demo/demo.webp" />
-  <img alt="Demo" src="./demo/pagespeed-score.png" />
+  <img src="./public/profile.webp" alt="Keiber Urbila" width="200" style="border-radius: 20px;" />
+  <p><strong>Apasionado por las nuevas tecnologías y el código abierto.</strong></p>
+  <p>Especializado en arquitecturas backend escalables, telecomunicaciones y soluciones móviles de alto rendimiento.</p>
 </div>
 
+---
+
+## �️ Stack Tecnológico
+
+Basado en mi experiencia profesional, estas son algunas de las herramientas que utilizo:
+
+- **Lenguajes:** Go (Fiber, Gin), Python (Pandas), Node.js (Express), JavaScript/TypeScript.
+- **Frontend:** Astro, React.
+- **Bases de Datos:** PostgreSQL, MongoDB, Redis.
+- **Infraestructura & DevOps:** Docker, Nginx, DigitalOcean, LiveKit, SNMP.
+- **IA:** Integración con Ollama y otros modelos.
+
+## 💼 Experiencia Destacada
+
+- **CANTV:** Desarrollador Fullstack & TechLead. Desarrollo de herramientas de medición de red ONT/ADSL y análisis estadístico.
+- **Verzus:** Desarrollador Backend. Arquitectura para plataformas de torneos de videojuegos y coleccionables digitales.
+- **Freekee.labs:** Desarrollador Backend. Implementación de streaming en vivo para deportes (LiveKit).
+- **We Box LLC:** Desarrollador Full Stack. Paneles administrativos para e-commerce (Walmart).
+
+## 🚀 Comandos del Proyecto
+
+Este portafolio está construido con **Astro**.
+
+| Comando                    | Acción                                           |
+| :------------------------- | :----------------------------------------------- |
+| `pnpm install`             | Instala las dependencias                         |
+| `pnpm run dev`             | Inicia el servidor de desarrollo en `localhost:4321` |
+| `pnpm run build`           | Construye el sitio para producción en `./dist/`  |
+| `pnpm run preview`         | Previsualiza la construcción localmente          |
+
+## 📬 Contacto
+
+- **Email:** [keiberup.dev@gmail.com](mailto:keiberup.dev@gmail.com)
+- **LinkedIn:** [in/keiber-urbila](https://www.linkedin.com/in/keiber-urbila)
+- **GitHub:** [@metalpoch](https://github.com/metalpoch)
+- **Instagram:** [@keiberup](https://www.instagram.com/keiberup)
+
+---
+
 <p align="center">
-Code is licensed under MIT, words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
+  Hecho con ❤️ por Keiber Urbila
 </p>
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build your production site to `./dist/`          |
-| `pnpm run preview`         | Preview your build locally, before deploying     |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
