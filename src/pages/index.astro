@@ -1,6 +1,7 @@
 ---
 import Component from "../components/Component.astro";
 import Experience from "../components/experience/index.astro";
+import GitHubActivity from "../components/GitHubActivity";
 import { EXPERIENCE } from "../data/experience";
 import { SOCIALS } from "../data/socials";
 import Layout from "../layouts/Layout.astro";
@@ -27,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
                 <h1>Keiber Urbila</h1>
               </a>
               <h2 class="mt-2 text-sm lg:text-lg font-medium text-neutral-400">
-                Desarrollador Full Stack
+                Desarrollador Backend
               </h2>
 
               <a
@@ -87,8 +88,8 @@ import Layout from "../layouts/Layout.astro";
             <div>
               <div class="mb-4 space-y-4">
                 <p>
-                  Desarrollador Full Stack apasionado por las nuevas tecnologías
-                  y el código abierto. Con experiencia en la creación de
+                  Desarrollador Backend apasionado por las nuevas tecnologías y
+                  el código abierto. Con experiencia en la creación de
                   herramientas de medición de tráfico de datos en
                   telecomunicaciones y desarrollo de backends para aplicaciones
                   móviles, me dedico a construir soluciones innovadoras y de
@@ -120,43 +121,64 @@ import Layout from "../layouts/Layout.astro";
               <ol class="group/list space-y-12">
                 {EXPERIENCE.map((experience) => <Experience {...experience} />)}
               </ol>
+            </div>
+          </section>
 
-              <!-- <div class="mt-12">
+          <section
+            id="activity"
+            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+            aria-label="GitHub Activity"
+          >
+            <div
+              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+            >
+              <h2
+                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
+              >
+                Actividad Reciente
+              </h2>
+            </div>
+            <GitHubActivity client:visible />
+          </section>
+
+          <section
+            id="action"
+            class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+            aria-label="Take Action"
+          >
+            <div
+              class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-3 backdrop-blur-lg md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+            >
+              <h2
+                class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
+              >
+                Hagamos algo juntos
+              </h2>
+            </div>
+            <div
+              class="flex flex-col gap-6 p-8 rounded-2xl border border-neutral-700/50 bg-neutral-900/40 backdrop-blur-xl shadow-2xl"
+            >
+              <p class="text-neutral-300">
+                ¿Tienes un proyecto en mente o buscas un desarrollador backend
+                para tu equipo? Estoy listo para aportar valor desde el primer
+                día.
+              </p>
+              <div class="flex flex-wrap gap-4">
                 <a
-                  data-ccursor
-                  class="inline-flex items-center leading-tight text-neutral-200 font-semibold group p-2 rounded px-3"
-                  aria-label="View Full Résumé"
+                  href="mailto:keiberup.dev@gmail.com"
+                  class="flex-1 min-w-[200px] text-center px-6 py-4 rounded-xl bg-neutral-50 text-neutral-950 font-bold hover:bg-neutral-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  🚀 Trabajeños juntos
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/keiber-urbila"
                   target="_blank"
-                  rel="noreferrer noopener"
-                  href="./resume.pdf"
+                  rel="noopener noreferrer"
+                  class="flex-1 min-w-[200px] text-center px-6 py-4 rounded-xl border border-neutral-700 font-bold text-neutral-200 hover:bg-neutral-800 transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <span>
-                    <span
-                      class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
-                    >
-                      Curriculum
-                    </span>
-                    <span class="whitespace-nowrap">
-                      <span
-                        class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
-                      >
-                        Vitae
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
-                        aria-hidden="true"
-                        ><path
-                          fill-rule="evenodd"
-                          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                          clip-rule="evenodd"></path></svg
-                      ></span
-                    ></span
-                  ></a
-                >
-              </div> -->
+                  💬 Hablemos por LinkedIn
+                </a>
+              </div>
             </div>
           </section>
         </main>

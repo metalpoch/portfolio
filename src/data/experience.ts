@@ -2,7 +2,17 @@ import type { Props as ExperienceProp } from "../components/experience/props";
 
 export const EXPERIENCE: ExperienceProp[] = [
   {
-    dates: "Abril 2024 — Actualidad",
+    dates: "Febrero 2024 — Actualidad",
+    title: "Desarrollador Fullstack, TechLead, DevOps",
+    company: "CANTV",
+    companyUrl: "https://www.cantv.com.ve",
+    description:
+      "Aplicación web diseñada para recopilar datos de diversas mediciones de red ONT, facilitando así el análisis estadístico de la información.",
+    technologies: ["Go lang", "Fiber", "IA", "Ollama", "Python", "Pandas", "JavaScript", "Astro", "PostgreSQL", "SNMP", "Docker", "Nginx"],
+    logo: "/logos/cantv.png",
+  },
+  {
+    dates: "Abril 2024 — Diciembre 2025",
     title: "Desarrollador Backend",
     company: "Freekee.labs (Remoto)",
     companyUrl: "https://hi-sporter.com/",
@@ -22,14 +32,24 @@ export const EXPERIENCE: ExperienceProp[] = [
     logo: "/logos/freekeelabs.png",
   },
   {
-    dates: "Febrero 2024 — Actualidad",
-    title: "Desarrollador Fullstack, TechLead, DevOps",
-    company: "CANTV",
-    companyUrl: "https://www.cantv.com.ve",
+    dates: "Noviembre 2024 — Diciembre 2025",
+    title: "Desarrollador Backend",
+    company: "Verzus (Remoto)",
+    companyUrl: "https://www.linkedin.com/company/verzus-live",
     description:
-      "Aplicación web diseñada para recopilar datos de diversas mediciones de red ONT, facilitando así el análisis estadístico de la información.",
-    technologies: ["Go lang", "Fiber", "IA", "Ollama", "Python", "Pandas", "JavaScript", "Astro", "PostgreSQL", "SNMP", "Docker", "Nginx"],
-    logo: "/logos/cantv.png",
+      "Plataforma integral para la creación de torneos de videojuegos con sistemas de recompensas y coleccionables digitales. Responsable del desarrollo de la arquitectura backend y la lógica de competición.",
+    technologies: [
+      "Go lang",
+      "Gin",
+      "Redis",
+      "Mongodb",
+      "Nginx",
+      "Docker",
+      "LiveKit",
+      "DigitalOcean",
+      "IA",
+    ],
+    logo: "/logos/verzus_live.jpg",
   },
   {
     dates: "Agosto 2022 — November 2022",
