@@ -62,6 +62,9 @@ const GitHubActivity: React.FC = () => {
         switch (event.type) {
             case "PushEvent":
                 const commitCount = event.payload.commits?.length || 0;
+                if (commitCount === 0) {
+                    return `Pushed to ${event.repo.name}`;
+                }
                 return `Pushed ${commitCount} commit${commitCount !== 1 ? "s" : ""} to ${event.repo.name}`;
             case "PullRequestEvent":
                 return `${event.payload.action === "opened" ? "Opened" : "Closed"} PR: ${event.payload.pull_request?.title} in ${event.repo.name}`;
